@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Taxi Cab Antwerp</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #000;
+        /* Nieuwe achtergrondafbeelding van Antwerpen skyline */
+        background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.1&auto=format&fit=crop&w=1950&q=80'); /* Alternatieve foto van Antwerpen skyline */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        /* Overlay voor contrast en leesbaarheid */
+        position: relative;
+    }
+    /* Overlay voor contrast */
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.6);
+        z-index: -1;
+    }
+    header {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+    h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+    .contact-info {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-info p {
+        margin: 5px 0;
+        font-size: 1.2em;
+    }
+    /* WhatsApp knop stijl */
+    a.whatsapp-button {
+        display: inline-flex;
+        align-items: center;
+        background-color: #25D366;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.2em;
+        margin-top: 10px;
+        transition: background-color 0.3s, transform 0.2s;
+        z-index: 1;
+        position: relative;
+    }
+    a.whatsapp-button span {
+        margin-right: 10px;
+        font-size: 1.4em;
+    }
+    a.whatsapp-button:hover {
+        background-color: #1ebe5b;
+        transform: scale(1.05);
+    }
+    /* Reserveringsinfo */
+    .reservering-info {
+        margin-top: 10px;
+        font-size: 1em;
+        color: #333;
+        max-width: 300px;
+        line-height: 1.4;
+        z-index: 1;
+        position: relative;
+    }
+    /* Rest van de pagina */
+    .content {
+        padding: 40px 20px;
+        max-width: 800px;
+        margin: auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    label {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    input, textarea {
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1em;
+    }
+    button {
+        margin-top: 20px;
+        padding: 12px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1em;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #333;
+    }
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        margin-top: 40px;
+        position: relative;
+        z-index: 1;
+    }
+    /* Extra info onderaan */
+    .extra-info {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        max-width: 800px;
+        margin: 40px auto 20px auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        font-size: 1.2em;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Taxi Cab Antwerp</h1>
+    <div class="contact-info">
+        <p>Telefoon: <a href="tel:32470683294">+32 470 68 32 94</a></p>
+        <div class="reservering-info">
+            Je kunt ook bellen voor reserveringen!
+        </div>
+        <a href="https://wa.me/32470683294" target="_blank" class="whatsapp-button">
+            <span>&#128222;</span> WhatsApp Doorverwijzing
+        </a>
+    </div>
+</header>
+
+<div class="content">
+    <h2>Maak een Reservering</h2>
+    <form action="mailto:nordinzbakh@hotmail.com" method="POST" enctype="text/plain">
+        <label for="naam">Naam:</label>
+        <input type="text" id="naam" name="naam" required />
+
+        <label for="telefoon">Telefoonnummer:</label>
+        <input type="tel" id="telefoon" name="telefoon" required />
+
+        <label for="datum">Datum en Tijd:</label>
+        <input type="datetime-local" id="datum" name="datum" required />
+
+        <label for="bestemming">Bestemming:</label>
+        <input type="text" id="bestemming" name="bestemming" required />
+
+        <label for="opmerkingen">Opmerkingen:</label>
+        <textarea id="opmerkingen" name="opmerkingen" rows="4"></textarea>
+
+        <button type="submit">Verzenden</button>
+    </form>
+</div>
+
+<!-- Extra boodschap onderaan -->
+<div class="extra-info">
+    Wij als Taxi Cab Antwerp zijn zowel in Antwerpen als in heel Vlaanderen te bestellen!
+</div>
+
+<footer>
+    &copy; 2024 Taxi Cab Antwerp. Alle rechten voorbehouden.
+</footer>
+</body>
+</html>
